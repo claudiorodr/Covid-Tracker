@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from colorlib.com/polygon/adminty/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jul 2020 10:05:54 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <title>Adminty - Premium Admin Template by Colorlib </title>
+
+
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="#">
+    <meta name="keywords"
+        content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+
+    <link rel="icon" href="https://colorlib.com/polygon/adminty/files/assets/images/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/flag-icons/css/flag-icon.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/feather/css/feather.css">
+
+    <link rel="stylesheet" type="text/css" href="../files/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../files/assets/css/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="feather icon-menu"></i>
+                        </a>
+                        <a href="index.html">
+                            <img class="img-fluid" src="../files/assets/images/logo.png" alt="Theme-Logo" />
+                        </a>
+                        <a class="mobile-options">
+                            <i class="feather icon-more-horizontal"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-addon search-close"><i
+                                                class="feather icon-x"></i></span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon search-btn"><i
+                                                class="feather icon-search"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#!"
+                                    onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:toggleFullScreen()"
+                                    data-cf-modified-29abc0cfe7b93f2e3b28781f-="">
+                                    <i class="feather icon-maximize full-screen"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-body">
+                                        <div class="row">
+
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-pink update-card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-end">
+                                                            <div class="col-8">
+                                                                <h4 id="deaths" class="text-white"></h4>
+                                                                <h6 class="text-white m-b-0">All Deaths</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <canvas id="update-chart-1" height="50"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <p class="text-white m-b-0 time"><i
+                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-yellow update-card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-end">
+                                                            <div class="col-8">
+                                                                <h4 id="confirmed" class="text-white"></h4>
+                                                                <h6 class="text-white m-b-0">All Confirmed</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <canvas id="update-chart-2" height="50"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <p class="text-white m-b-0 time"><i
+                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-green update-card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-end">
+                                                            <div class="col-8">
+                                                                <h4 id="recovered" class="text-white"></h4>
+                                                                <h6 class="text-white m-b-0">All Recovered</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <canvas id="update-chart-3" height="50"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <p class="text-white m-b-0 time"><i
+                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-lite-green update-card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-end">
+                                                            <div class="col-8">
+                                                                <h4 class="text-white">500</h4>
+                                                                <h6 class="text-white m-b-0">Downloads</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <canvas id="update-chart-4" height="50"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <p class="text-white m-b-0 time"><i
+                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-xl-6 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Daily New Cases</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="feather icon-maximize full-card"></i></li>
+                                                                <li><i class="feather icon-minus minimize-card"></i>
+                                                                </li>
+                                                                <li><i class="feather icon-trash-2 close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div id="daily-cases" style="height: 265px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-6 col-md-12">
+                                                <div class="card table-card">
+                                                    <div class="card-header">
+                                                        <h5>Global Sales by
+                                                            Top Locations
+                                                        </h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-borderless">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#
+                                                                        </th>
+                                                                        <th>Country
+                                                                        </th>
+                                                                        <th>Trend
+                                                                        </th>
+                                                                        <th class="text-right">
+                                                                            Total Cases
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="top">
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="text-right  m-r-20">
+                                                            <a href="#!" class="b-b-primary text-primary">View
+                                                                all Sales
+                                                                Locations
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Basic Map With
+                                                        Markers</h5>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="card-block">
+                                                        <div id="world-map-markers" class="set-map">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="styleSelector">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/jquery/js/jquery.min.js">
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
+        src="../files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/popper.js/js/popper.min.js">
+    </script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
+        src="../files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
+        src="../files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/modernizr/js/modernizr.js">
+    </script>
+
+    <script
+        src="../../../../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
+        type="0f228f5a3d8c7d9081493477-text/javascript"></script>
+    <script src="../files/assets/pages/vector-maps/js/jquery-jvectormap-2.0.2.min.js"
+        type="0f228f5a3d8c7d9081493477-text/javascript"></script>
+    <script src="../files/assets/pages/vector-maps/js/jquery-jvectormap-world-mill-en.js"
+        type="0f228f5a3d8c7d9081493477-text/javascript"></script>
+    <script src="../files/assets/pages/vector-maps/js/gdp-data.js" type="0f228f5a3d8c7d9081493477-text/javascript">
+    </script>
+
+
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/chart.js/js/Chart.js">
+    </script>
+
+    <script src="../files/assets/pages/widget/amchart/amcharts.js" type="29abc0cfe7b93f2e3b28781f-text/javascript">
+    </script>
+    <script src="../files/assets/pages/widget/amchart/serial.js" type="29abc0cfe7b93f2e3b28781f-text/javascript">
+    </script>
+    <script src="../files/assets/pages/widget/amchart/light.js" type="29abc0cfe7b93f2e3b28781f-text/javascript">
+    </script>
+    <script src="../files/assets/js/jquery.mCustomScrollbar.concat.min.js"
+        type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/js/SmoothScroll.js"></script>
+    <script src="../files/assets/js/pcoded.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+
+    <script src="../files/assets/js/vartical-layout.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/pages/dashboard/custom-dashboard.js">
+    </script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/js/script.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
+        type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="b9a443fdfd75624cb88d5dcf-text/javascript" src="../files/assets/pages/flag-icons.js"></script>
+
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script src="../../../../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="29abc0cfe7b93f2e3b28781f-|49" defer=""></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="../../../../node_modules\timeago.js\dist\timeago.full.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var baseURL = 'https://api.covid19api.com'
+
+            $.ajax({
+                type: "get",
+                url: baseURL + '/world/total',
+                dataType: "json",
+                success: function (response) {
+                    totalConfirmed = response.TotalConfirmed
+                    totalDeaths = response.TotalDeaths
+                    totalRecovered = response.TotalRecovered
+
+                    var totalConfirmed = numeral(totalConfirmed).format('0,0');
+                    var totalDeaths = numeral(totalDeaths).format('0,0');
+                    var totalRecovered = numeral(totalRecovered).format('0,0');
+
+                    $('#confirmed').text(totalConfirmed);
+                    $('#deaths').text(totalDeaths);
+                    $('#recovered').text(totalRecovered);
+                }
+            });
+
+            $.ajax({
+                type: "get",
+                url: baseURL + '/stats',
+                dataType: "json",
+                success: function (response) {
+                    $('.time span').text(timeago.format(response.AllUpdated, 'en_US'));
+                }
+            });
+            
+            var codes
+
+            $.ajax({
+                type: "get",
+                url: "https://api.apify.com/v2/key-value-stores/SmuuI0oebnTWjRTUh/records/LATEST?disableRedirect=true",
+                dataType: "json",
+                success: function (response) {
+                    $.ajax({
+                        type: "get",
+                        url: "https://cdn.jsdelivr.net/npm/country-list@2.2.0/data.json",
+                        dataType: "json",
+                        success: function (response2) {
+                            codes = response2
+                            
+                            var top_five = 0
+        
+                            for (let i = 0; i < response.regionData.length; i++) {
+                                if (top_five == 5) {
+                                    break
+                                }
+        
+                                if (response.regionData[i].population != 0) {
+                                    var name = response.regionData[i].country
+                                    var confirmed = numeral(response.regionData[i].totalCases).format('0,0');
+                                    
+                                    for (let i = 0; i < codes.length; i++) {
+                                        
+                                        if (name == codes[i].name) {
+                                            $("#top").append( `<tr><td><img src="../files/assets/images/widget/` + codes[i].code + `.jpg" alt="" class="img-fluid img-30"></div></td> <td>` + name + ` </td> <td><canvas id="app-sale`+ i + `" height="50" width="100"></canvas> </td> <td class="text-right">` + confirmed + `</td> </tr>` );
+                                            top_five++
+                                            break
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+                    });
+
+
+
+                }
+            });
+        });
+    </script>
+</body>
+
+
+
+</html>
