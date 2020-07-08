@@ -1,9 +1,12 @@
 const express = require('express')
 const CronJob = require('cron').CronJob
 const request = require('request')
+const request2 = require('request-promise')
+const moment = require('moment')
+var cors = require('cors')
+const dotenv = require('dotenv')
 const worldRoute = require('./routes/world')
 const db = require('./connection')
-const dotenv = require('dotenv')
 const PORT = process.env.PORT || 3001
 
 const app = express()
@@ -13,9 +16,11 @@ app.use(express.json())
 app.use(express.urlencoded({
   extended: false
 }))
+app.use(cors())
 
 
-const job = new CronJob('*/10 * * * * *', function () {
+
+const job = new CronJob('0 */1 * * * *', async function () {
   request('https://api.covid19api.com/summary', {
     json: true
   }, async (err, res, body) => {
@@ -36,7 +41,7 @@ const job = new CronJob('*/10 * * * * *', function () {
     await db.findOne('Countries_Summary')
     var results = db.results
     await results.info.sort((a, b) => (a.TotalConfirmed < b.TotalConfirmed) ? 1 : -1)
-    
+
     await db.insert('Countries_Summary_ordered', results)
   })
 
@@ -52,6 +57,31 @@ const job = new CronJob('*/10 * * * * *', function () {
       'date': body.data[0].date
     })
   })
+
+  await db.findOne('Countries_Summary_ordered')
+  var ordered_countries = db.results
+  var now = moment().tz('America/Phoenix').format('YYYY-MM-DD')
+  var date = moment().tz('America/Phoenix').subtract(10, 'days').format('YYYY-MM-DD')
+
+  
+  var top = []
+
+  for (let i = 0; i < 5; i++) {
+    await request2('https://api.covid19api.com/total/country/' + ordered_countries.info[i].Slug + '/status/confirmed?from=' + date + '&to=' + now, {
+      json: true
+    }, (err, res, body) => {
+      if (err) {
+        return console.log(err)
+      }
+      top.push(body)
+    })
+  }
+
+  db.insert('Top_Timeline', {
+    'info': top
+  })
+
+
 })
 
 job.start();
