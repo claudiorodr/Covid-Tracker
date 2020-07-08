@@ -1,6 +1,8 @@
 const router = require('express').Router()
 var db = require('../connection')
-const { response } = require('express')
+const {
+    response
+} = require('express')
 
 
 router.get('/total', async (req, res) => {
@@ -33,10 +35,42 @@ router.get('/trends_five', async (req, res) => {
             return value - min;
         });
         confirmed.push(confirmed_temp)
+    }
+
+    var daily_confirmed = []
+
+    for (let i = 0; i < confirmed.length; i++) {
+        var daily_confirmed_temp = []
+        for (let j = 1; j < confirmed[i].length; j++) {
+            var day = confirmed[i][j] - confirmed[i][j - 1];
+            daily_confirmed_temp.push(day)
+        }
+        var min = Math.min.apply(null, daily_confirmed_temp)
+        var daily_confirmed_temp = daily_confirmed_temp.map(function (value) {
+            return value - min;
+        });
+        daily_confirmed.push(daily_confirmed_temp)
 
     }
 
-    
+    var daily = []
+
+    for (let i = 0; i < daily_confirmed.length; i++) {
+        var daily_temp = []
+
+        var min = Math.min.apply(null, daily_confirmed[i])
+        var max = Math.max.apply(null, daily_confirmed[i])
+
+        for (let j = 0; j < daily_confirmed[i].length; j++) {
+            var cases = Math.round((((daily_confirmed[i][j] - min) * (45 - 1)) / (max - min)) + 1)
+            daily_temp.push(cases)
+        }
+        daily.push(daily_temp)
+
+    }
+    res.send(daily)
+
+
 })
 
 module.exports = router

@@ -20,7 +20,7 @@ app.use(cors())
 
 
 
-const job = new CronJob('0 */1 * * * *', async function () {
+const job = new CronJob('0 0 */12 * * *', async function () {
   request('https://api.covid19api.com/summary', {
     json: true
   }, async (err, res, body) => {
