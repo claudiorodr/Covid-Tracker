@@ -109,7 +109,8 @@
                 latLng: [.33, 6.73],
                 name: "São Tomé and Príncipe"
             }]
-        }), maps("#asia").vectorMap({
+        }), 
+        maps("#asia").vectorMap({
             map: "asia_mill",
             backgroundColor: "transparent",
             regionStyle: {
@@ -117,7 +118,8 @@
                     fill: "#4DB6AC"
                 }
             }
-        }), maps("#india").vectorMap({
+        }), 
+        maps("#india").vectorMap({
             map: "in_mill",
             backgroundColor: "transparent",
             regionStyle: {
@@ -125,7 +127,8 @@
                     fill: "#1B8BF9"
                 }
             }
-        }),  maps("#usa").vectorMap({
+        }),  
+        maps("#usa").vectorMap({
             map: "us_aea_en",
             backgroundColor: "transparent",
             regionStyle: {
@@ -133,7 +136,8 @@
                     fill: "#CDDC39"
                 }
             }
-        }), maps("#uk").vectorMap({
+        }), 
+        maps("#uk").vectorMap({
             map: "uk_mill_en",
             backgroundColor: "transparent",
             regionStyle: {
@@ -142,7 +146,7 @@
                 }
             }
         }),
-            maps("#canada").vectorMap({
+        maps("#canada").vectorMap({
                 map: "uk_mill_en",
                 backgroundColor: "transparent",
                 regionStyle: {
@@ -150,7 +154,7 @@
                         fill: "#18FFFF"
                     }
                 }
-            })
+        })
   }, maps.VectorMap = new b, maps.VectorMap.Constructor = b
 }(window.jQuery),
 function(maps) {

@@ -1,29 +1,29 @@
 'use strict';
 $(document).ready(function () {
-    var ctx = document.getElementById('update-chart-1').getContext("2d");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: valincome('#fff', [25, 30, 20, 15, 20], '#fff'),
-        options: valincomebuildoption(),
-    });
-    var ctx = document.getElementById('update-chart-2').getContext("2d");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: valincome('#fff', [10, 30, 20, 15, 30], '#fff'),
-        options: valincomebuildoption(),
-    });
-    var ctx = document.getElementById('update-chart-3').getContext("2d");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: valincome('#fff', [25, 10, 20, 15, 20], '#fff'),
-        options: valincomebuildoption(),
-    });
-    var ctx = document.getElementById('update-chart-4').getContext("2d");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: valincome('#fff', [25, 30, 20, 15, 10], '#fff'),
-        options: valincomebuildoption(),
-    });
+    // var ctx = document.getElementById('update-chart-1').getContext("2d");
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: valincome('#fff', [25, 30, 20, 15, 20], '#fff'),
+    //     options: valincomebuildoption(),
+    // });
+    // var ctx = document.getElementById('update-chart-2').getContext("2d");
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: valincome('#fff', [10, 30, 20, 15, 30], '#fff'),
+    //     options: valincomebuildoption(),
+    // });
+    // var ctx = document.getElementById('update-chart-3').getContext("2d");
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: valincome('#fff', [25, 10, 20, 15, 20], '#fff'),
+    //     options: valincomebuildoption(),
+    // });
+    // var ctx = document.getElementById('update-chart-4').getContext("2d");
+    // var myChart = new Chart(ctx, {
+    //     type: 'bar',
+    //     data: valincome('#fff', [25, 30, 20, 15, 10], '#fff'),
+    //     options: valincomebuildoption(),
+    // });
 
     function valincome(a, b, f) {
         if (f == null) {

@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../files/assets/icon/flag-icons/css/flag-icon.css">
 
+    <link rel="stylesheet" type="text/css" href="../files/assets/pages/vector-maps/css/jquery-jvectormap-2.0.2.css">
 
     <link rel="stylesheet" type="text/css" href="../files/assets/icon/feather/css/feather.css">
 
@@ -127,84 +128,69 @@
                                 <div class="page-wrapper">
                                     <div class="page-body">
                                         <div class="row">
-
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-pink update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 id="deaths" class="text-white"></h4>
-                                                                <h6 class="text-white m-b-0">All Deaths</h6>
+                                            <div class="col-xl-4 col-md-6">
+                                                <div class="card o-hidden">
+                                                    <div class="card-block bg-c-pink text-white">
+                                                        <h6>Daily New Deaths<span class="f-right time"><i
+                                                                    class="feather icon-clock m-r-15"></i></span>
+                                                        </h6>
+                                                        <canvas id="sale-chart1" height="150"></canvas>
+                                                    </div>
+                                                    <div class="card-footer text-center">
+                                                        <div class="row">
+                                                            <div class="col-6 b-r-default">
+                                                                <h4 id="deaths"></h4>
+                                                                <p class="text-muted m-b-0">Total Deaths</p>
                                                             </div>
-                                                            <div class="col-4 text-right">
-                                                                <canvas id="update-chart-1" height="50"></canvas>
+                                                            <div class="col-6">
+                                                                <h4 id="new_deaths"></h4>
+                                                                <p class="text-muted m-b-0">New Deaths</p>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0 time"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-yellow update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 id="confirmed" class="text-white"></h4>
-                                                                <h6 class="text-white m-b-0">All Confirmed</h6>
+                                            <div class="col-xl-4 col-md-6">
+                                                <div class="card o-hidden">
+                                                    <div class="card-block bg-c-green text-white">
+                                                        <h6>Daily New Recoveries<span class="f-right time"><i
+                                                                    class="feather icon-clock m-r-15"></i></span>
+                                                        </h6>
+                                                        <canvas id="sale-chart2" height="150"></canvas>
+                                                    </div>
+                                                    <div class="card-footer text-center">
+                                                        <div class="row">
+                                                            <div class="col-6 b-r-default">
+                                                                <h4 id="recoveries"></h4>
+                                                                <p class="text-muted m-b-0">Total Recoveries</p>
                                                             </div>
-                                                            <div class="col-4 text-right">
-                                                                <canvas id="update-chart-2" height="50"></canvas>
+                                                            <div class="col-6">
+                                                                <h4 id="new_recoveries"></h4>
+                                                                <p class="text-muted m-b-0">New Recoveries</p>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0 time"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-green update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 id="recovered" class="text-white"></h4>
-                                                                <h6 class="text-white m-b-0">All Recovered</h6>
+                                            <div class="col-xl-4 col-md-12">
+                                                <div class="card o-hidden">
+                                                    <div class="card-block bg-c-yellow text-white">
+                                                        <h6>Daily New Cases<span class="f-right time"><i
+                                                                    class="feather icon-clock m-r-15"></i></span>
+                                                        </h6>
+                                                        <canvas id="sale-chart3" height="150"></canvas>
+                                                    </div>
+                                                    <div class="card-footer text-center">
+                                                        <div class="row">
+                                                            <div class="col-6 b-r-default">
+                                                                <h4 id="confirmed"></h4>
+                                                                <p class="text-muted m-b-0">Total Confirmed</p>
                                                             </div>
-                                                            <div class="col-4 text-right">
-                                                                <canvas id="update-chart-3" height="50"></canvas>
+                                                            <div class="col-6">
+                                                                <h4 id="new_confirmed"></h4>
+                                                                <p class="text-muted m-b-0">New Confirmed</p>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0 time"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-lite-green update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 class="text-white">500</h4>
-                                                                <h6 class="text-white m-b-0">Downloads</h6>
-                                                            </div>
-                                                            <div class="col-4 text-right">
-                                                                <canvas id="update-chart-4" height="50"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0 time"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i><span></span>
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -246,8 +232,7 @@
                                             <div class="col-xl-12 col-md-12">
                                                 <div class="card table-card">
                                                     <div class="card-header">
-                                                        <h5>Global Sales by
-                                                            Top Locations
+                                                        <h5>Top Countries
                                                         </h5>
                                                     </div>
                                                     <div class="card-block">
@@ -284,24 +269,21 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h5>Basic Map With
-                                                        Markers</h5>
-                                                </div>
-                                                <div class="col-sm-6">
+                                            <div class="col-xl-12 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Basic Map With
+                                                            Markers</h5>
+                                                    </div>
                                                     <div class="card-block">
                                                         <div id="world-map-markers" class="set-map">
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="styleSelector">
                                 </div>
                             </div>
                         </div>
@@ -311,58 +293,24 @@
         </div>
     </div>
 
-
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/jquery/js/jquery.min.js">
-    </script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/jquery/js/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
-        src="../files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/popper.js/js/popper.min.js">
-    </script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
-        src="../files/bower_components/bootstrap/js/bootstrap.min.js"></script>
-
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
-        src="../files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
-
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/modernizr/js/modernizr.js">
-    </script>
-
-    <script
-        src="../../../../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
-        type="0f228f5a3d8c7d9081493477-text/javascript"></script>
-    <script src="../files/assets/pages/vector-maps/js/jquery-jvectormap-2.0.2.min.js"
-        type="0f228f5a3d8c7d9081493477-text/javascript"></script>
-    <script src="../files/assets/pages/vector-maps/js/jquery-jvectormap-world-mill-en.js"
-        type="0f228f5a3d8c7d9081493477-text/javascript"></script>
-    <script src="../files/assets/pages/vector-maps/js/gdp-data.js" type="0f228f5a3d8c7d9081493477-text/javascript">
-    </script>
-
-
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/chart.js/js/Chart.js">
-    </script>
-
-    <script src="../files/assets/pages/widget/amchart/amcharts.js" type="29abc0cfe7b93f2e3b28781f-text/javascript">
-    </script>
-    <script src="../files/assets/pages/widget/amchart/serial.js" type="29abc0cfe7b93f2e3b28781f-text/javascript">
-    </script>
-    <script src="../files/assets/pages/widget/amchart/light.js" type="29abc0cfe7b93f2e3b28781f-text/javascript">
-    </script>
-    <script src="../files/assets/js/jquery.mCustomScrollbar.concat.min.js"
-        type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"src="../files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+    <!-- <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/popper.js/js/popper.min.js"> </script> -->
+    <!-- <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/bootstrap/js/bootstrap.min.js"></script> -->
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+    
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/bower_components/chart.js/js/Chart.js"></script>
+    <script src="../files/assets/pages/widget/amchart/amcharts.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script src="../files/assets/pages/widget/amchart/serial.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script src="../files/assets/pages/widget/amchart/light.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script src="../files/assets/js/jquery.mCustomScrollbar.concat.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
     <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/js/SmoothScroll.js"></script>
     <script src="../files/assets/js/pcoded.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
-
-    <script src="../files/assets/js/vartical-layout.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/pages/dashboard/custom-dashboard.js">
-    </script>
     <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/js/script.min.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-        type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
-    <script type="b9a443fdfd75624cb88d5dcf-text/javascript" src="../files/assets/pages/flag-icons.js"></script>
-
+    <script src="../files/assets/js/vartical-layout.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="../files/assets/pages/dashboard/custom-dashboard.js"></script>
+    <script src="../files/assets/pages/vector-maps/js/map-vector.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
     <script type="29abc0cfe7b93f2e3b28781f-text/javascript">
         window.dataLayer = window.dataLayer || [];
 
@@ -377,38 +325,8 @@
         data-cf-settings="29abc0cfe7b93f2e3b28781f-|49" defer=""></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
     <script src="../../../../node_modules\timeago.js\dist\timeago.full.min.js"></script>
-
     <script>
         $(document).ready(function () {
-            var baseURL = 'https://api.covid19api.com'
-
-            $.ajax({
-                type: "get",
-                url: baseURL + '/world/total',
-                dataType: "json",
-                success: function (response) {
-                    totalConfirmed = response.TotalConfirmed
-                    totalDeaths = response.TotalDeaths
-                    totalRecovered = response.TotalRecovered
-
-                    var totalConfirmed = numeral(totalConfirmed).format('0,0');
-                    var totalDeaths = numeral(totalDeaths).format('0,0');
-                    var totalRecovered = numeral(totalRecovered).format('0,0');
-
-                    $('#confirmed').text(totalConfirmed);
-                    $('#deaths').text(totalDeaths);
-                    $('#recovered').text(totalRecovered);
-                }
-            });
-
-            $.ajax({
-                type: "get",
-                url: baseURL + '/stats',
-                dataType: "json",
-                success: function (response) {
-                    $('.time span').text(timeago.format(response.AllUpdated, 'en_US'));
-                }
-            });
 
             var codes
 
@@ -435,13 +353,13 @@
                             `</td> </tr>`);
                     }
 
-
-
                     $.ajax({
                         type: "get",
                         url: "http://127.0.0.1:3001/api/world/trends_five",
                         dataType: "json",
                         success: function (response) {
+
+
 
                             // var ctx = document.getElementById('app-sale0').getContext("2d");
                             // var myChart = new Chart(ctx, {
@@ -449,6 +367,7 @@
                             // data: amuntchart('#11c15b', [1, 15, 45, 15, 25, 35, 45, 20, 25, 30], 'transparent'),
                             // options: buildchartoption(),
                             // });
+
                             var ctx = document.getElementById('app-sale1').getContext(
                                 "2d");
                             var myChart = new Chart(ctx, {
@@ -477,7 +396,8 @@
                                 "2d");
                             var myChart = new Chart(ctx, {
                                 type: 'line',
-                                data: amuntchart('#536dfe', response[4], 'transparent'),
+                                data: amuntchart('#536dfe', response[4],
+                                    'transparent'),
                                 options: buildchartoption(),
                             });
 
@@ -575,7 +495,153 @@
                         }
                     });
                 }
+
             });
+            $.ajax({
+                type: "get",
+                url: "http://127.0.0.1:3001/api/world/timeline",
+                dataType: "json",
+                success: function (response) {
+
+                    $("#deaths").text(numeral(response.info[0].deaths).format('0,0'));
+                    $("#new_deaths").text(numeral(response.info[0].new_deaths).format('0,0'));
+                    $("#recoveries").text(numeral(response.info[0].recovered).format('0,0'));
+                    $("#new_recoveries").text(numeral(response.info[0].new_recovered).format(
+                        '0,0'));
+                    $("#confirmed").text(numeral(response.info[0].confirmed).format('0,0'));
+                    $("#new_confirmed").text(numeral(response.info[0].new_confirmed).format('0,0'));
+                    $(".time").text(timeago.format(response.info[0].updated_at, 'en_EN'));
+
+                    var deaths = []
+                    var recovered = []
+                    var confirmed = []
+                    var date = []
+
+                    for (let i = 15; i > 0; i--) {
+                        deaths.push(numeral(response.info[i].new_deaths).format('0.0'))
+                        recovered.push(numeral(response.info[i].new_recovered).format('0.0'))
+                        confirmed.push(numeral(response.info[i].new_confirmed).format('0.0'))
+                        date.push(response.info[i].date)
+                    }
+
+                    var ctx = document.getElementById('sale-chart1').getContext("2d");
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: salechart('#b71c1c', deaths,
+                            'transparent'),
+                        options: salebuildoption(),
+                    });
+                    var ctx = document.getElementById('sale-chart2').getContext("2d");
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: salechart('#00692c', recovered,
+                            'transparent'),
+                        options: salebuildoption(),
+                    });
+                    var ctx = document.getElementById('sale-chart3').getContext("2d");
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: salechart('#096567', confirmed,
+                            'transparent'),
+                        options: salebuildoption(),
+                    });
+
+                    function salechart(a, b, f) {
+                        if (f == null) {
+                            f = "rgba(0,0,0,0)";
+                        }
+                        return {
+                            labels: date,
+                            datasets: [{
+                                label: "",
+                                borderColor: a,
+                                borderWidth: 2,
+                                hitRadius: 30,
+                                pointRadius: 3,
+                                pointHoverRadius: 4,
+                                pointBorderWidth: 5,
+                                pointHoverBorderWidth: 12,
+                                pointBackgroundColor: Chart.helpers.color("#000000").alpha(
+                                    0).rgbString(),
+                                // pointBorderColor: Chart.helpers.color("#000000").alpha(0).rgbString(),
+                                pointBorderColor: a,
+                                pointHoverBackgroundColor: a,
+                                pointHoverBorderColor: Chart.helpers
+                                    .color("#000000").alpha(.1)
+                                    .rgbString(),
+                                fill: true,
+                                lineTension: 0,
+                                backgroundColor: f,
+                                data: b,
+                            }]
+                        };
+                    }
+
+                    function salebuildoption() {
+                        return {
+                            maintainAspectRatio: false,
+                            title: {
+                                display: !1
+                            },
+                            tooltips: {
+                                position: 'nearest',
+                                mode: 'index',
+                                intersect: false,
+                                yPadding: 10,
+                                xPadding: 10,
+                            },
+                            legend: {
+                                display: !1,
+                                labels: {
+                                    usePointStyle: !1
+                                }
+                            },
+                            responsive: !0,
+                            maintainAspectRatio: !0,
+                            hover: {
+                                mode: "index"
+                            },
+                            scales: {
+                                xAxes: [{
+                                    display: !1,
+                                    gridLines: !1,
+                                    scaleLabel: {
+                                        display: !0,
+                                        labelString: "Month"
+                                    }
+                                }],
+                                yAxes: [{
+                                    display: !1,
+                                    gridLines: !1,
+                                    scaleLabel: {
+                                        display: !0,
+                                        labelString: "Value"
+                                    },
+                                    ticks: {
+                                        beginAtZero: !0
+                                    }
+                                }]
+                            },
+                            elements: {
+                                point: {
+                                    radius: 4,
+                                    borderWidth: 12
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    left: 10,
+                                    right: 10,
+                                    top: 25,
+                                    bottom: 25
+                                }
+                            }
+                        };
+                    }
+
+                }
+            });
+            
         });
     </script>
 </body>
