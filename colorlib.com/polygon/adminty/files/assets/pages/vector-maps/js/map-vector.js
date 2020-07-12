@@ -3,6 +3,7 @@
     "use strict";
     var b = function() {};
     b.prototype.init = function() {
+        console.log(maps);
         maps("#world-map-markers").vectorMap({
             map: "world_mill_en",
             scaleColors: ["#2196F3", "#1B8BF9"],
@@ -109,51 +110,6 @@
                 latLng: [.33, 6.73],
                 name: "São Tomé and Príncipe"
             }]
-        }), 
-        maps("#asia").vectorMap({
-            map: "asia_mill",
-            backgroundColor: "transparent",
-            regionStyle: {
-                initial: {
-                    fill: "#4DB6AC"
-                }
-            }
-        }), 
-        maps("#india").vectorMap({
-            map: "in_mill",
-            backgroundColor: "transparent",
-            regionStyle: {
-                initial: {
-                    fill: "#1B8BF9"
-                }
-            }
-        }),  
-        maps("#usa").vectorMap({
-            map: "us_aea_en",
-            backgroundColor: "transparent",
-            regionStyle: {
-                initial: {
-                    fill: "#CDDC39"
-                }
-            }
-        }), 
-        maps("#uk").vectorMap({
-            map: "uk_mill_en",
-            backgroundColor: "transparent",
-            regionStyle: {
-                initial: {
-                    fill: "#81c868"
-                }
-            }
-        }),
-        maps("#canada").vectorMap({
-                map: "uk_mill_en",
-                backgroundColor: "transparent",
-                regionStyle: {
-                    initial: {
-                        fill: "#18FFFF"
-                    }
-                }
         })
   }, maps.VectorMap = new b, maps.VectorMap.Constructor = b
 }(window.jQuery),
