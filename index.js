@@ -11,14 +11,16 @@ const PORT = process.env.PORT || 3001
 
 const app = express()
 dotenv.config();
-
+app.use(express.static(__dirname + '/public'))
 app.use(express.json())
 app.use(express.urlencoded({
   extended: false
 }))
 app.use(cors())
 
-
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/colorlib.com/polygon/adminty/default/index2.html');
+})
 
 const job = new CronJob('0 0 */12 * * *', async function () {
   request('https://api.covid19api.com/summary', {
@@ -63,7 +65,7 @@ const job = new CronJob('0 0 */12 * * *', async function () {
   var now = moment().tz('America/Phoenix').format('YYYY-MM-DD')
   var date = moment().tz('America/Phoenix').subtract(10, 'days').format('YYYY-MM-DD')
 
-  
+
   var top = []
 
   for (let i = 0; i < 5; i++) {
