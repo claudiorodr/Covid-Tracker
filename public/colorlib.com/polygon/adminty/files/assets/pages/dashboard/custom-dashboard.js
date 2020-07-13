@@ -121,7 +121,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "get",
-            url: "http://127.0.0.1:3001/api/world/timeline",
+            url: "/api/world/timeline",
             dataType: "json",
             success: function (response) {
                 for (let i = response.info.length - 1; i > 0; i--) {

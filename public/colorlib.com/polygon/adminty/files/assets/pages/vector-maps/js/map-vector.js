@@ -3,7 +3,7 @@
 'use strict';
 $.ajax({
     type: "get",
-    url: "http://127.0.0.1:3001/api/world/top",
+    url: "/api/world/top",
     dataType: "json",
     success: function (response) {
         var country_confirmed = []
