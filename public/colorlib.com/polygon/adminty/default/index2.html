@@ -26,16 +26,21 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/colorlib.com/polygon/adminty/files/bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="/colorlib.com/polygon/adminty/files/bower_components/bootstrap/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/colorlib.com/polygon/adminty/files/assets/icon/flag-icons/css/flag-icon.css">
+    <link rel="stylesheet" type="text/css"
+        href="/colorlib.com/polygon/adminty/files/assets/icon/flag-icons/css/flag-icon.css">
 
-    <link rel="stylesheet" type="text/css" href="/colorlib.com/polygon/adminty/files/assets/pages/vector-maps/css/jquery-jvectormap-2.0.2.css">
+    <link rel="stylesheet" type="text/css"
+        href="/colorlib.com/polygon/adminty/files/assets/pages/vector-maps/css/jquery-jvectormap-2.0.2.css">
 
-    <link rel="stylesheet" type="text/css" href="/colorlib.com/polygon/adminty/files/assets/icon/feather/css/feather.css">
+    <link rel="stylesheet" type="text/css"
+        href="/colorlib.com/polygon/adminty/files/assets/icon/feather/css/feather.css">
 
     <link rel="stylesheet" type="text/css" href="/colorlib.com/polygon/adminty/files/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/colorlib.com/polygon/adminty/files/assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css"
+        href="/colorlib.com/polygon/adminty/files/assets/css/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -83,11 +88,9 @@
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
                     <div class="navbar-logo">
-                        <a class="mobile-menu" id="mobile-collapse" href="#!">
-                            <i class="feather icon-menu"></i>
-                        </a>
                         <a href="index.html">
-                            <img class="img-fluid" src="/colorlib.com/polygon/adminty/files/assets/images/logo.png" alt="Theme-Logo" />
+                            <img class="img-fluid" src="/colorlib.com/polygon/adminty/files/assets/images/logo.png"
+                                alt="Theme-Logo" />
                         </a>
                         <a class="mobile-options">
                             <i class="feather icon-more-horizontal"></i>
@@ -131,8 +134,11 @@
                                             <div class="col-xl-4 col-md-6">
                                                 <div class="card o-hidden">
                                                     <div class="card-block bg-c-pink text-white">
-                                                        <h6>Daily New Deaths<span class="f-right time"><i
-                                                                    class="feather icon-clock m-r-15"></i></span>
+                                                        <h6>Daily New Deaths
+                                                            <span class="f-right">
+                                                                <i class="feather icon-clock m-r-15"></i>
+                                                                <span class="time"></span>
+                                                            </span>
                                                         </h6>
                                                         <canvas id="sale-chart1" height="150"></canvas>
                                                     </div>
@@ -153,8 +159,9 @@
                                             <div class="col-xl-4 col-md-6">
                                                 <div class="card o-hidden">
                                                     <div class="card-block bg-c-green text-white">
-                                                        <h6>Daily New Recoveries<span class="f-right time"><i
-                                                                    class="feather icon-clock m-r-15"></i></span>
+                                                        <h6>Daily New Recoveries<span class="f-right "><i
+                                                                    class="feather icon-clock m-r-15"></i>
+                                                                <span class="time"></span></span>
                                                         </h6>
                                                         <canvas id="sale-chart2" height="150"></canvas>
                                                     </div>
@@ -175,8 +182,9 @@
                                             <div class="col-xl-4 col-md-12">
                                                 <div class="card o-hidden">
                                                     <div class="card-block bg-c-yellow text-white">
-                                                        <h6>Daily New Cases<span class="f-right time"><i
-                                                                    class="feather icon-clock m-r-15"></i></span>
+                                                        <h6>Daily New Cases<span class="f-right"><i
+                                                                    class="feather icon-clock m-r-15"></i><span
+                                                                    class="time"></span></span>
                                                         </h6>
                                                         <canvas id="sale-chart3" height="150"></canvas>
                                                     </div>
@@ -194,18 +202,32 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                             <div class="col-xl-12 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Map by Total Cases</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="feather icon-maximize full-card"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div id="world-map-markers" class="set-map">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-xl-6 col-md-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Daily New Cases</h5>
                                                         <div class="card-header-right">
                                                             <ul class="list-unstyled card-option">
                                                                 <li><i class="feather icon-maximize full-card"></i></li>
-                                                                <li><i class="feather icon-minus minimize-card"></i>
-                                                                </li>
-                                                                <li><i class="feather icon-trash-2 close-card"></i></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -214,14 +236,6 @@
                                                     </div>
                                                     <div class="card-header">
                                                         <h5>Daily New Deaths</h5>
-                                                        <div class="card-header-right">
-                                                            <ul class="list-unstyled card-option">
-                                                                <li><i class="feather icon-maximize full-card"></i></li>
-                                                                <li><i class="feather icon-minus minimize-card"></i>
-                                                                </li>
-                                                                <li><i class="feather icon-trash-2 close-card"></i></li>
-                                                            </ul>
-                                                        </div>
                                                     </div>
                                                     <div class="card-block">
                                                         <div id="daily-deaths" style="height: 265px;"></div>
@@ -229,11 +243,17 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-xl-12 col-md-12">
+                                            <div class="col-xl-6 col-md-12">
                                                 <div class="card table-card">
                                                     <div class="card-header">
                                                         <h5>Top Countries
                                                         </h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="feather icon-maximize full-card"></i>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="table-responsive">
@@ -246,9 +266,9 @@
                                                                         </th>
                                                                         <th>Trend
                                                                         </th>
-                                                                        <th>Total Recovered
-                                                                        </th>
                                                                         <th>Total Deaths
+                                                                        </th>
+                                                                        <th>Total Recovered
                                                                         </th>
                                                                         <th class="text-right">
                                                                             Total Cases
@@ -261,25 +281,62 @@
                                                             </table>
                                                         </div>
                                                         <div class="text-right  m-r-20">
-                                                            <a href="#!" class="b-b-primary text-primary">View
-                                                                all Sales
-                                                                Locations
+                                                            <a href="#!" class="b-b-primary text-primary">View All
+                                                                Countries
                                                             </a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-12 col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Map by Total Cases</h5>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div id="world-map-markers" class="set-map">
+                                                <div class="col-xl-12" style="padding-left: 0%; padding-right: 0%;">
+                                                    <div class="card">
+                                                        <div class="card-block">
+                                                            <div class="row">
+                                                                <div class="col-sm-4">
+                                                                    <h2 class="d-inline-block text-c-pink m-r-10">
+                                                                        897
+                                                                    </h2>
+                                                                    <div class="d-inline-block">
+                                                                        <p class="m-b-0">
+                                                                            <i
+                                                                                class="feather icon-chevrons-up m-r-10 text-c-pink"></i>10%
+                                                                        </p>
+                                                                        <p class="text-muted m-b-0">
+                                                                            New Deaths
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <h2 class="d-inline-block text-c-pink m-r-10">
+                                                                        897
+                                                                    </h2>
+                                                                    <div class="d-inline-block">
+                                                                        <p class="m-b-0">
+                                                                            <i
+                                                                                class="feather icon-chevrons-up m-r-10 text-c-pink"></i>10%
+                                                                        </p>
+                                                                        <p class="text-muted m-b-0">
+                                                                            New Recoveries
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <h2 class="d-inline-block text-c-pink m-r-10">
+                                                                        8456
+                                                                    </h2>
+                                                                    <div class="d-inline-block">
+                                                                        <p class="m-b-0">
+                                                                            <i
+                                                                                class="feather icon-chevrons-up m-r-10 text-c-pink"></i>87%
+                                                                        </p>
+                                                                        <p class="text-muted m-b-0">
+                                                                            New Cases
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
@@ -311,18 +368,21 @@
         type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
     <script src="/colorlib.com/polygon/adminty/files/assets/js/jquery.mCustomScrollbar.concat.min.js"
         type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="/colorlib.com/polygon/adminty/files/assets/js/SmoothScroll.js"></script>
-    <script src="/colorlib.com/polygon/adminty/files/assets/js/pcoded.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
-    <script type="29abc0cfe7b93f2e3b28781f-text/javascript" src="/colorlib.com/polygon/adminty/files/assets/js/script.min.js"></script>
-    <script src="/colorlib.com/polygon/adminty/files/assets/js/vartical-layout.min.js" type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
+        src="/colorlib.com/polygon/adminty/files/assets/js/SmoothScroll.js"></script>
+    <script src="/colorlib.com/polygon/adminty/files/assets/js/pcoded.min.js"
+        type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
+    <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
+        src="/colorlib.com/polygon/adminty/files/assets/js/script.min.js"></script>
+    <script src="/colorlib.com/polygon/adminty/files/assets/js/vartical-layout.min.js"
+        type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
     <script type="29abc0cfe7b93f2e3b28781f-text/javascript"
         src="/colorlib.com/polygon/adminty/files/assets/pages/dashboard/custom-dashboard.js"></script>
     <script src="/colorlib.com/polygon/adminty/files/assets/pages/vector-maps/js/jquery-jvectormap-2.0.2.min.js"
         type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
     <script src="/colorlib.com/polygon/adminty/files/assets/pages/vector-maps/js/jquery-jvectormap-world-mill-en.js"
         type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
-    <script
-        src="developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
+    <script src="developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
         type="0f228f5a3d8c7d9081493477-text/javascript"></script>
     <script src="/colorlib.com/polygon/adminty/files/assets/pages/vector-maps/js/map-vector.js"
         type="29abc0cfe7b93f2e3b28781f-text/javascript"></script>
@@ -360,11 +420,13 @@
                         var confirmed = numeral(response.info[i].TotalConfirmed).format('0,0')
 
                         $("#top").append(`<tr>
-                            <td><img src="/colorlib.com/polygon/adminty/files/assets/images/widget/` + code.toLowerCase() +
+                            <td><img src="/colorlib.com/polygon/adminty/files/assets/images/widget/` + code
+                            .toLowerCase() +
                             `.jpg" alt="" class="img-fluid img-30"></div></td> <td>` + name +
                             ` </td> <td><canvas id="app-sale` + i +
-                            `" height="50" width="100"></canvas> </td> <td class="text-c-green">` +
-                            recovered + `</td><td class="text-c-pink">` + deaths +
+                            `" height="50" width="100"></canvas> </td> <td class="text-c-pink">` +
+                            deaths + `</td>
+                            <td class="text-c-green">` + recovered +
                             `</td><td class="text-right text-c-blue">` + confirmed +
                             `</td> </tr>`);
                     }
@@ -377,18 +439,20 @@
 
 
 
-                            // var ctx = document.getElementById('app-sale0').getContext("2d");
-                            // var myChart = new Chart(ctx, {
-                            // type: 'line',
-                            // data: amuntchart('#11c15b', [1, 15, 45, 15, 25, 35, 45, 20, 25, 30], 'transparent'),
-                            // options: buildchartoption(),
-                            // });
+                            var ctx = document.getElementById('app-sale0').getContext(
+                                "2d");
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: amuntchart('#448aff', response[3],
+                                    'transparent'),
+                                options: buildchartoption(),
+                            });
 
                             var ctx = document.getElementById('app-sale1').getContext(
                                 "2d");
                             var myChart = new Chart(ctx, {
                                 type: 'line',
-                                data: amuntchart('#448aff', response[0],
+                                data: amuntchart('#448aff', response[1],
                                     'transparent'),
                                 options: buildchartoption(),
                             });
@@ -396,7 +460,7 @@
                                 "2d");
                             var myChart = new Chart(ctx, {
                                 type: 'line',
-                                data: amuntchart('#ff5252', response[1],
+                                data: amuntchart('#448aff', response[2],
                                     'transparent'),
                                 options: buildchartoption(),
                             });
