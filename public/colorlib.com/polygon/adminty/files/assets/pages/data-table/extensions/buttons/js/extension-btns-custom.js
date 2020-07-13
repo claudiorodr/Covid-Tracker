@@ -155,7 +155,13 @@ $(document).ready(function() {
     });
     $('#basic-btn').DataTable({
         dom: 'Bfrtip',
-        buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+        buttons: ['copy', 'csv', 'excel', 'pdf', 'print', {
+            text: 'JSON',
+            action: function (e, dt, button, config) {
+                var data = dt.buttons.exportData();
+                $.fn.dataTable.fileSave(new Blob([JSON.stringify(data)]), 'Export.json');
+            }
+        }]
     });
     $('#custom-btn').DataTable({
         dom: 'Bfrtip',

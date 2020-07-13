@@ -19,7 +19,11 @@ app.use(express.urlencoded({
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/colorlib.com/polygon/adminty/default/index2.html');
+  res.sendFile(__dirname + '/public/colorlib.com/polygon/adminty/default/index.html');
+})
+
+app.get('/all', (req, res) => {
+  res.sendFile(__dirname + '/public/colorlib.com/polygon/adminty/default/all.html');
 })
 
 const job = new CronJob('*/60 * * * * *', async function () {
