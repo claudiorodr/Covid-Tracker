@@ -347,7 +347,7 @@
 
             $.ajax({
                 type: "get",
-                url: "http://127.0.0.1:3001/api/world/top",
+                url: "/api/world/top",
                 dataType: "json",
                 success: function (response) {
 
@@ -359,7 +359,7 @@
                         var code = response.info[i].CountryCode
                         var confirmed = numeral(response.info[i].TotalConfirmed).format('0,0')
 
-                        $("#top").append(`<tr><td><img src="/colorlib.com/polygon/adminty/files/assets/images/widget/` + code +
+                        $("#top").append(`<tr><td><img src="public/colorlib.com/polygon/adminty/files/assets/images/widget/` + code +
                             `.jpg" alt="" class="img-fluid img-30"></div></td> <td>` + name +
                             ` </td> <td><canvas id="app-sale` + i +
                             `" height="50" width="100"></canvas> </td> <td class="text-c-green">` +
@@ -370,7 +370,7 @@
 
                     $.ajax({
                         type: "get",
-                        url: "http://127.0.0.1:3001/api/world/trends_five",
+                        url: "/api/world/trends_five",
                         dataType: "json",
                         success: function (response) {
 
@@ -514,7 +514,7 @@
             });
             $.ajax({
                 type: "get",
-                url: "http://127.0.0.1:3001/api/world/timeline",
+                url: "/api/world/timeline",
                 dataType: "json",
                 success: function (response) {
 
