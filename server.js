@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/colorlib.com/polygon/adminty/default/index2.html');
 })
 
-const job = new CronJob('0 0 */1 * * *', async function () {
+const job = new CronJob('*/60 * * * * *', async function () {
   request('https://api.covid19api.com/summary', {
     json: true
   }, async (err, res, body) => {
