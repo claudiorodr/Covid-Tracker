@@ -20,7 +20,6 @@ $.ajax({
                 "use strict";
                 var b = function () {};
                 b.prototype.init = function () {
-                    console.log(maps);
                     maps("#world-map-markers").vectorMap({
                         map: "world_mill_en",
                         series: {
