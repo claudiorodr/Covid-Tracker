@@ -359,7 +359,8 @@
                         var code = response.info[i].CountryCode
                         var confirmed = numeral(response.info[i].TotalConfirmed).format('0,0')
 
-                        $("#top").append(`<tr><td><img src="public/colorlib.com/polygon/adminty/files/assets/images/widget/` + code +
+                        $("#top").append(`<tr>
+                            <td><img src="/colorlib.com/polygon/adminty/files/assets/images/widget/` + code.toLowerCase() +
                             `.jpg" alt="" class="img-fluid img-30"></div></td> <td>` + name +
                             ` </td> <td><canvas id="app-sale` + i +
                             `" height="50" width="100"></canvas> </td> <td class="text-c-green">` +
