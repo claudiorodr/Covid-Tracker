@@ -295,12 +295,12 @@
                     for (let i = 0; i < response.info.length; i++) {
                         $("#all").append(` <tr>
                             <td>` + response.info[i].Country + `</td>
-                            <td>` + response.info[i].NewConfirmed + `</td>
-                            <td>` + response.info[i].TotalConfirmed + `</td>
-                            <td>` + response.info[i].NewDeaths + `</td>
-                            <td>` + response.info[i].TotalDeaths + `</td>
-                            <td>` + response.info[i].NewRecovered + `</td>
-                            <td>` + response.info[i].TotalRecovered + `</td>
+                            <td>` + numeral(response.info[i].NewConfirmed).format('0,0') + `</td>
+                            <td>` + numeral(response.info[i].TotalConfirmed).format('0,0') + `</td>
+                            <td>` + numeral(response.info[i].NewDeaths).format('0,0') + `</td>
+                            <td>` + numeral(response.info[i].TotalDeaths).format('0,0') + `</td>
+                            <td>` + numeral(response.info[i].NewRecovered).format('0,0') + `</td>
+                            <td>` + numeral(response.info[i].TotalRecovered).format('0,0') + `</td>
                         </tr>`);
                     }
 
